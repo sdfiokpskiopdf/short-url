@@ -1,0 +1,31 @@
+.NavbarItems {
+    height: 100%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.NavbarItems ul {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 1.5rem;
+    padding: 1.4rem;
+}
+
+.nav-link-container {
+    transition: 0.5s;
+}
+
+.nav-link-container:hover {
+    margin-top: -10px;
+}

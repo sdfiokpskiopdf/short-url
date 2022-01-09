@@ -15,11 +15,19 @@
     list-style: none;
 }
 
+.NavbarItems h1 {
+    color: aqua;
+}
+
 .nav-links {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.87);
     font-size: 1.5rem;
     padding: 1.4rem;
+}
+
+.active {
+    color: aqua;
 }
 
 .nav-link-container {

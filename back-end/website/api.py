@@ -5,9 +5,11 @@ from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from . import db
 from .models import Url
+from flask_cors import CORS
 
 
 def create_api(app):
+    CORS(app)
     api = Blueprint("api", __name__)
     limiter = Limiter(app, key_func=get_remote_address)
 

@@ -60,9 +60,9 @@ const RotatingTitle = () => {
     }, [])
 
     return (
-        <div className="content">
+        <>
             <h1 className="text">A <span className="txt-rotate" data-period="2000" data-rotate='["Better", "Faster", "Simpler", "Stronger"]'></span> URL Shortener</h1>
-        </div>
+        </>
     )
 }
 

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
+import Predirect from './components/Predirect/Predirect';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home onAdd={addURL} />} />
           <Route exact path="/about" element={<h1>About</h1>} />
+          <Route exact path="/:alias" element={<Predirect onFetch={fetchURL} />} />
         </Routes>
       </div>
     </Router>

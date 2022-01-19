@@ -5,7 +5,7 @@ const Home = (props) => {
     return (
         <div className="Home">
             <RotatingTitle />
-            <Form onSubmit={props.onAdd} />
+            <Form theme={props.theme} onSubmit={props.onAdd} />
         </div>
     )
 }

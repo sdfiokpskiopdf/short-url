@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
 import { MenuItems } from './MenuItems'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css'
 
 function NavBar() {
     const [activeIndex, setActiveIndex] = useState(0)
+    const [showMenu, setShowMenu] = useState(false)
 
     const handleClick = (index) => {
         setActiveIndex(index)
@@ -13,8 +13,14 @@ function NavBar() {
 
     return (
         <nav className="NavbarItems">
-            <h1>URL Shortener</h1>
-            <ul>
+            <div className="top">
+                <h1>URL Shortener</h1>
+
+                <div className="menu-icon" onClick={() => setShowMenu(!showMenu)}>
+                    <i className={showMenu ? "fas fa-times" : "fas fa-bars"}></i>
+                </div>
+            </div>
+            <ul className={showMenu ? "nav-menu active" : "nav-menu"}>
                 {MenuItems.map((item, index) => {
                     let cName = item.cName;
 

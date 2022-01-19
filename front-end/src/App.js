@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import Predirect from './components/Predirect/Predirect';
-
+import MetaTags from 'react-meta-tags';
 
 function App() {
 
@@ -23,6 +22,10 @@ function App() {
 
   return (
     <Router>
+      <MetaTags>
+        <title>URL Shortener</title>
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+      </MetaTags>
       <div className="App">
         <Navbar />
         <Routes>
@@ -31,7 +34,7 @@ function App() {
           <Route exact path="/:alias" element={<Predirect onFetch={fetchURL} />} />
         </Routes>
       </div>
-    </Router>
+    </Router >
   );
 }
 
